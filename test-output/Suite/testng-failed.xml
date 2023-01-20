@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.Life_Insurance.Generic_Utilities.ListenerImplementation"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Test(failed)">
+    <parameter name="Browser" value="Chrome"/>
+    <classes>
+      <class name="Nominee.Nominee_Add_NomineeTest">
+        <methods>
+          <include name="logoutOfApp"/>
+          <include name="closeBrowser"/>
+          <include name="AddNominee"/>
+          <include name="connectToDB"/>
+          <include name="closeDB"/>
+          <include name="configBC"/>
+          <include name="loginToApp"/>
+        </methods>
+      </class> <!-- Nominee.Nominee_Add_NomineeTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
